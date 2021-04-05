@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProofOFWorkSHA256
 {
@@ -18,13 +19,20 @@ namespace ProofOFWorkSHA256
 
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            while(true)
+            resultData.HashData = string.Empty;
+            while (true)
             {
+                if (stopwatch.Elapsed.TotalSeconds > 5)
+                {
+                    MessageBox.Show("Too hard to find hash with that count of zero bits");
+                    break;
+                }
                 if ((!resultData.HashData.StartsWith(expectedResult)))
                 {
                     resultData.NumberOfIterations++;
                     resultData.Data = testData + RandomStringGenerator.GenerateByLen(10);
                     resultData.HashData = HashOperations.GenerateSha256String(resultData.Data);
+                    resultData.Time = stopwatch.Elapsed.TotalSeconds;
                 }
                 else
                 {

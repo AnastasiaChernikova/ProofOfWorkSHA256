@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProofOFWorkSHA256"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Foreground="#FFCA5252">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFBFFF08" Offset="0"/>
+            <GradientStop Color="#FF256E13" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        
+        <TextBox x:Name="startingZerosTxt" HorizontalAlignment="Left" Height="23" Margin="380,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="StartingZeros" HorizontalAlignment="Left" Margin="270,153,0,0" VerticalAlignment="Top"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="311,267,0,0" VerticalAlignment="Top" Width="189" Height="54" Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF83B027" Offset="0.234"/>
+                    <GradientStop Color="#FF47F61B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="timeForProcessTxt" HorizontalAlignment="Left" Height="23" Margin="380,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Calculation Time (in seconds):" HorizontalAlignment="Left" Margin="184,197,0,0" VerticalAlignment="Top"/>
+        <Button Content="Clear Data from File" HorizontalAlignment="Left" Margin="311,326,0,0" VerticalAlignment="Top" Width="189" Height="54" Click="Button_Click1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF83B027" Offset="0.234"/>
+                    <GradientStop Color="#FF47F61B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>
