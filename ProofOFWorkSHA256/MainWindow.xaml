@@ -13,26 +13,14 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <TextBox x:Name="startingZerosTxt" HorizontalAlignment="Left" Height="23" Margin="380,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="StartingZeros" HorizontalAlignment="Left" Margin="270,153,0,0" VerticalAlignment="Top"/>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="311,267,0,0" VerticalAlignment="Top" Width="189" Height="54" Click="Button_Click">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF83B027" Offset="0.234"/>
-                    <GradientStop Color="#FF47F61B" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Label Content="StartingZeros" HorizontalAlignment="Left" Margin="270,153,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="311,267,0,0" VerticalAlignment="Top" Width="189" Height="54" Click="Button_Click" Background="#FF54CA20" FontFamily="Segoe UI Black"/>
         <TextBox x:Name="timeForProcessTxt" HorizontalAlignment="Left" Height="23" Margin="380,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Calculation Time (in seconds):" HorizontalAlignment="Left" Margin="184,197,0,0" VerticalAlignment="Top"/>
-        <Button Content="Clear Data from File" HorizontalAlignment="Left" Margin="311,326,0,0" VerticalAlignment="Top" Width="189" Height="54" Click="Button_Click1">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF83B027" Offset="0.234"/>
-                    <GradientStop Color="#FF47F61B" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        <Label Content="Calculation Time (in seconds):" HorizontalAlignment="Left" Margin="184,197,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <Button Content="Clear Data from File" HorizontalAlignment="Left" Margin="311,326,0,0" VerticalAlignment="Top" Width="189" Height="54" Click="Button_Click1" Background="#FF54CA20" FontFamily="Segoe UI Black"/>
+        <CheckBox x:Name="sixteenCheckBox" Content="16" HorizontalAlignment="Left" Margin="423,159,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
+        <CheckBox x:Name="thirtyTwoCheckBox" Content="32" HorizontalAlignment="Left" Margin="467,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.173,0.645" FontFamily="Segoe UI Black"/>
+        <CheckBox x:Name="eightCheckBox" Content="8" HorizontalAlignment="Left" Margin="380,159,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black"/>
 
     </Grid>
 </Window>

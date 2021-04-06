@@ -15,6 +15,7 @@ namespace ProofOFWorkSHA256
             var resultData = new StorageOfData();
 
             // startingZeros - number of starting zero bits resulting SHA256 block hash should contain
+
             var expectedResult = new string('0', startingZeros);
 
             var stopwatch = new Stopwatch();
@@ -22,7 +23,7 @@ namespace ProofOFWorkSHA256
             resultData.HashData = string.Empty;
             while (true)
             {
-                if (stopwatch.Elapsed.TotalSeconds > 5)
+                if (stopwatch.Elapsed.TotalSeconds > 300)
                 {
                     MessageBox.Show("Too hard to find hash with that count of zero bits");
                     break;

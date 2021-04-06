@@ -32,9 +32,28 @@ namespace ProofOFWorkSHA256
             var storage = new StorageOfData();
             var proofOfWork = new ProofOfWork();
             storage.Time = 0;
+            // Get startingZeros from checkboxes
+            // 8 by default
+            var startingZeros = 2;
+            if (eightCheckBox.IsChecked.Value)
+            {
+                // 8 zero bits
+                startingZeros = 2;
+            }
+            if (sixteenCheckBox.IsChecked.Value)
+            {
+                // 16 zero bits
+                startingZeros = 4;
+            }
+            if (thirtyTwoCheckBox.IsChecked.Value)
+            {
+                // 32 zero bits
+                startingZeros = 8;
+            }
+            
             while (storage.Time < Int32.Parse(timeForProcessTxt.Text))
             {
-                var result = ProofOfWork.StartProofOfWork("Alice", Int32.Parse(startingZerosTxt.Text));
+                var result = ProofOfWork.StartProofOfWork("Alice", startingZeros);
                 storage.Time += result.Time;
                 numberOfSolutionsFound++;
                 // store data in bin\Debug
